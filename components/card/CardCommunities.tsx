@@ -4,8 +4,13 @@ import Link from "next/link";
 import Button from "../button";
 import Chip from "../chip";
 import { FaLocationDot } from "react-icons/fa6";
+import { CommunityGroup } from "@/types/types";
 
-const CardCommunities = ({ community }) => {
+type CardCommunitiesPropTypes = {
+  community: CommunityGroup;
+};
+
+const CardCommunities = ({ community }: CardCommunitiesPropTypes) => {
   return (
     <div className="max-w-sm bg-white rounded-lg shadow-xl border-neutral-600 m-2">
       <div className="w-full h-400 relative rounded-t-lg overflow-hidden">
@@ -32,7 +37,10 @@ const CardCommunities = ({ community }) => {
           </h5>
         </div>
         <div className="flex justify-end">
-          <Button text="Check this area" href={`/houses/${community.id}/${community.name}/${community.group}`} />
+          <Button
+            text="Check this area"
+            href={`/houses/${community.id}/${community.name}/${community.group}`}
+          />
         </div>
       </div>
     </div>

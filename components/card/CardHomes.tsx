@@ -3,8 +3,13 @@ import Image from "next/image";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaHouseChimney } from "react-icons/fa6";
 import { BiArea } from "react-icons/bi";
+import { Homes } from "@/types/types";
 
-export default function CardHomes({ homes }) {
+type CardHomesProps = {
+  homes: Homes;
+};
+
+export default function CardHomes({ homes }: CardHomesProps) {
   const getImageSrc = (type: string) => {
     switch (type) {
       case "House":

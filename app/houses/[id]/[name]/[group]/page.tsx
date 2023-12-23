@@ -1,55 +1,33 @@
 import CardHomes from "@/components/card/CardHomes";
+import { CommunityGroup, Homes } from "@/types/types";
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
 
-
-
-type Community = {
-  id: string;
-  communityId: string;
-  price: number;
-  area: number;
-  type: string;
-};
 
 export default async function page({
   params,
 }: {
   params: { id: string; name: string; group: string };
 }) {
-  const homeRes = await fetch(
-    `https://storage.googleapis.com/openhouse-ai-fe-coding-test/homes.json`,
+  const res = await fetch(
+    "https://storage.googleapis.com/openhouse-ai-fe-coding-test/homes.json"
   );
-
-  const homeData: Community[] = await homeRes.json();
-  const filteredHomeData = homeData.filter(
-    (item) => item.communityId === params.id,
+  const data: Homes[] = await res.json();
+  const community = data.filter(
+    (community) => community.communityId === params.id
   );
-
-  const comRes = await fetch(
-    "https://storage.googleapis.com/openhouse-ai-fe-coding-test/communities.json",
+  const resImg = await fetch(
+    "https://storage.googleapis.com/openhouse-ai-fe-coding-test/communities.json"
   );
-  const comData = await comRes.json();
-
-  const filteredComData = comData.filter(
-    (item: Community) => item.id === params.id,
-  );
-  const validImageUrl =
-    filteredComData[0] &&
-    filteredComData[0].imgUrl &&
-    filteredComData[0].imgUrl !== "";
+  const dataImg: CommunityGroup[] = await resImg.json();
+  const img = dataImg.filter((community) => community.id === params.id);
+  const validImageUrl = img[0] && img[0].imgUrl && img[0].imgUrl !== "";
 
   return (
     <div className="mx-auto mt-20">
       <div className="relative h-full min-h-[200px] w-full md:min-h-[200px]">
         <Image
-          src={
-
-            
-            validImageUrl
-              ? filteredComData[0].imgUrl
-              : "/images/img_noimagÏe.webp"
-          }
+          src={validImageUrl ? img[0].imgUrl : "/images/img_noimagÏe.webp"}
           alt="Hero image"
           width={400}
           height={400}
@@ -66,7 +44,7 @@ export default async function page({
         </div>
       </div>
       <div className="mx-8 mt-8 flex flex-wrap items-center justify-center gap-8 pb-16 md:mx-16 md:pt-4">
-        {filteredHomeData.map((homes: any) => (
+        {community.map((homes: Homes) => (
           <CardHomes key={homes.id} homes={homes} />
         ))}
       </div>
