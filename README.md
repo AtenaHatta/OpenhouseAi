@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center"><img src="https://ik.imagekit.io/atcan/logo.png?updatedAt=1703341259697" alt="project-image" width="400"></p>
 
-## Getting Started
+<h2>Project Screenshots:</h2>
+<img src="https://ik.imagekit.io/atcan/Group%2030.png?updatedAt=1703341638927" alt="project-screenshot" />
 
-First, run the development server:
+<h2>Mook up design:</h2>
+<img src="https://ik.imagekit.io/atcan/Screenshot%202023-12-23%20at%207.17.45%20AM.png?updatedAt=1703344748091" />
+Before starting the coding process, I conducted a comprehensive design planning. This approach allowed us to consider the layout from the user's perspective, making the coding process smoother and more efficient.
+Click <a href="https://www.figma.com/file/ZvYeBhjSKfQpsPuiwOs90f/Untitled?type=design&node-id=0%3A1&mode=design&t=3ulXoOYxRMrOX1hg-1" alt="figma-link" >the link</a> to view a mock-up design created with Figma.
+  
+<h2>Features</h2>
+<h4>-Server Performance</p>
+<ul>
+<li>Enhanced server performance by adopting Server-Side Rendering, taking into account the LCP (Largest Contentful Paint) score.</li>
+<li>By converting all images to the WebP format, I optimized server performance.</li>
+<li>Utilizing Next.js 14 further enables robust performance.</li>
+</ul>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<h4>-User experience</h4>
+<ul>
+<li>focused on creating a user-engaging design by being mindful of button placements and color contrast.</li>
+<li>This design is responsive to variable screen sizes.</li>
+</ul>
+
+<h4>-Code</h4>
+<ul>
+<li>By creating components for frequently used styles like buttons and chips, I achieved a reduction in code repetition.</li>
+<li>By using Prettier and ESLint, I focused on enhancing the readability of styling with Tailwind and maintaining clean code.</li>
+</ul>
+
+<h4>-SEO</h4>
+<ul>
+<li>Setted metadata for each page, customizing the title and description according to the content of each page. </li>
+<li>By adding alt attributes to buttons and images,I also focused on SEO optimization</li>
+</ul>
+
+<h2>Improve the quality of this application</h2>
+If I have time, I would like to update some of the applications I have created, so I have summarized them below.
+<h4>-Broken links</h4>
+<p>In the API data, there are instances where image URLs are included, but they sometimes lead to broken links. In these cases, displaying a 'no data' image on the website improved the user experience</p>
+
+<h4>-A range bar</h4>
+<p>By creating a range bar that allows users to display data for the amount money they want to search for, and enabling area searches, the website becomes more user-friendly and easier to navigate</p>
+
+<h4>-Skeloton layout</h4>
+<p>Implemented a skeleton layout using Shedcn, and I aim to design the layout to resemble the data, as well as enable the insertion of the skeleton on all pages where data is being fetched.</p>
+
+<h4>-Integrating Google Maps</h4>
+<p>By integrating Google Maps and displaying property locations on the map, the website becomes more user-friendly. This approach is likely to prevent users from dropping off the website</p>
+
+
+<h2>Built with:</h2>
+<ul>
+<li>Next.js 14</li>
+<li>TypeScript</li>
+<li>TailwindCSS</li>
+<li>library (shedcn)</li>
+</ul>
+
+
+<h2>How to Run the Project:</h2>
+
+<p>1. Clone the repository</p>
+
+```
+git clone https://github.com/your-repository/OpenhouseAi.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>2. Navigate to the project directory:</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+cd my-app
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>3. Install the required dependencies:</p>
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+<p>4. To start the development server run:</p>
+<p>This will make the project available on `http://localhost:3000`.</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<h2>License:</h2>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under OpenHouse.ai
