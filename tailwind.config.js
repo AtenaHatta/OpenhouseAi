@@ -77,6 +77,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        popins: ['Poppins', ...fontFamily.sans],
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

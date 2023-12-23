@@ -11,7 +11,7 @@ export default async function CardCommunitiesWrapper() {
 
   return (
     <div className="flex flex-wrap justify-center items-center mx-8 md:mx-16 md:pt-4 pb-16 gap-4">
-      {data.length === 0 ? (
+      {data[0].id.length === 0 ? (
         <>
           <Skeleton className="h-[300px] w-[300px]" />
           <Skeleton className="h-[300px] w-[300px]" />
