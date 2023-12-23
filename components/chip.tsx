@@ -13,7 +13,7 @@ export default function Chip({ group }: { group: string }) {
   return (
     <div
       className={`${color(
-        group,
+        group
       )}  w-[80px] rounded-md px-1 py-2 text-center font-semibold text-xs text-white shadow-lg shadow-gray-500`}
     >
       {group}

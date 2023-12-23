@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = ({ text, href }) => {
   return (
     <Link
       href={href}
-      className="inline-flex items-center rounded-lg bg-orange px-3 py-2 text-sm font-medium text-white hover:bg-amber-400 focus:outline-none"
+      className="inline-flex items-center rounded-lg bg-orange px-3 py-2 text-sm font-semibold text-white hover:bg-amber-400 focus:outline-none"
     >
       {text}
     </Link>
