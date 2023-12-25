@@ -54,7 +54,7 @@ If I have time, I would like to update some of the applications I have created, 
 <li>Next.js 14</li>
 <li>TypeScript</li>
 <li>TailwindCSS</li>
-<li>library (shedcn)</li>
+<li>shadcn/ui</li>
 </ul>
 
 
@@ -66,19 +66,13 @@ If I have time, I would like to update some of the applications I have created, 
 git clone https://github.com/your-repository/OpenhouseAi.git
 ```
 
-<p>2. Navigate to the project directory:</p>
-
-```
-cd my-app
-```
-
-<p>3. Install the required dependencies:</p>
+<p>2. Install the required dependencies:</p>
 
 ```
 npm install
 ```
 
-<p>4. To start the development server run:</p>
+<p>3. To start the development server run:</p>
 <p>This will make the project available on `http://localhost:3000`.</p>
 
 ```
