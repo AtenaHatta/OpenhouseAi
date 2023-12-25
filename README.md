@@ -1,5 +1,7 @@
 <p align="center"><img src="https://ik.imagekit.io/atcan/logo.png?updatedAt=1703341259697" alt="project-image" width="400"></p>
 
+<p align="center"><a href="https://openhouse-ai.vercel.app/">Demo page</a></p>
+
 <h2>Project Screenshots:</h2>
 <img src="https://ik.imagekit.io/atcan/Group%2030.png?updatedAt=1703341638927" alt="project-screenshot" />
 
